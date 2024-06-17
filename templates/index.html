@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Film and Series Database</title>
+</head>
+<body>
+    <h1>Films</h1>
+    <ul>
+        {% for movie in movies %}
+        <li><a href="/movie/{{ movie.id }}">{{ movie.title }}</a> ({{ movie.release_date }})</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Series</h1>
+    <ul>
+        {% for series in series %}
+        <li><a href="/series/{{ series.id }}">{{ series.title }}</a> ({{ series.release_date }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

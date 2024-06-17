@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ movie.title }}</title>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p>Release Date: {{ movie.release_date }}</p>
+    <p>Genre: {{ movie.genre }}</p>
+
+    <h2>Statistics</h2>
+    <ul>
+        {% for stat in statistics %}
+        <li>Date: {{ stat.date }}, Views: {{ stat.views }}, Likes: {{ stat.likes }}, Dislikes: {{ stat.dislikes }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
